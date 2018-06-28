@@ -32,7 +32,7 @@ $(document).ready(function(){
         return false
         });
     }
-
+//function to display Giphy items
     function showGiphy(){
         var animal = $(this).attr("animal");
         var queryURL = "http://api.giphy.com/v1/gifs/search?q=" +
@@ -65,7 +65,7 @@ $(document).ready(function(){
     })      
     }
 
-    //   // Calling the function to display the intial buttons
+    // Calling the function to display the intial buttons and what they user has entered
     renderButtons();
     addNewButtons();
 

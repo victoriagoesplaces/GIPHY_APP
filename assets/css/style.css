@@ -1,3 +1,37 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('../images/background.jpg') !important;
+    background-size: 100%;
+    font-family: 'Kaushan Script', cursive;
+    color:  rgb(61, 167, 144);
+}
+
 .jumbotron {
-    text-align: center !important;
+    text-align: center;
+    font-family: 'Kaushan Script', cursive;
+    background-color: rgba(103, 226, 199, 0.616);
+    font-weight: bolder; 
+    color:  rgb(61, 167, 144);
+}
+
+.main{
+    font-family: 'Kaushan Script', cursive;
+    margin: 2%;
+    color:  rgb(61, 167, 144);
+}
+ 
+.giphy {
+    color:  rgb(61, 167, 144);
+} 
+
+#submit {
+    color:  rgb(61, 167, 144);
+}
+
+img {
+    float: left;
+    width: 200px;
 }
