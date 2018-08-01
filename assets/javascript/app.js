@@ -38,31 +38,31 @@ $(document).ready(function(){
         var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
         animal + "&api_key=lygpbhcJDvXB6WtmAMphpmGaHl7ldAGB&limit=10";
             
-    $.ajax({
-            url: queryURL,
-            method: "GET"
-        })
-        .then(function(response) {
-            $("#mainBox").empty();
-            var results = response.data;
-            console.log(response.data);
+        $.ajax({
+                url: queryURL,
+                method: "GET"
+            })
+            .then(function(response) {
+                $("#mainBox").empty();
+                var results = response.data;
+                console.log(response.data);
 
-        for (var i = 0; i < results.length; i++){
-            var GIPHY = $("<div class='GIPHY'>");
-            var image = $("<img class='image'>");
+            for (var i = 0; i < results.length; i++){
+                var GIPHY = $("<div class='GIPHY'>");
+                var image = $("<img class='image'>");
 
-            image.attr("src", results[i].images.fixed_height_small_still.url);
-            image.attr("data-still", results[i].images.fixed_height_small_still.url);
-            image.attr("data-animate", results[i].images.fixed_height_small.url);
-            image.attr("data-state", "still");
+                image.attr("src", results[i].images.fixed_height_small_still.url);
+                image.attr("data-still", results[i].images.fixed_height_small_still.url);
+                image.attr("data-animate", results[i].images.fixed_height_small.url);
+                image.attr("data-state", "still");
 
-            GIPHY.append(image);
-            var rating = $("<p>").text("Rating: " + results[i].rating);
-            GIPHY.append(rating);
+                GIPHY.append(image);
+                var rating = $("<p>").text("Rating: " + results[i].rating);
+                GIPHY.append(rating);
 
-            $("#mainBox").prepend(GIPHY)
-        }
-    })      
+                $("#mainBox").prepend(GIPHY)
+            }
+        })      
     }
 
     // Calling the function to display the intial buttons and what they user has entered
