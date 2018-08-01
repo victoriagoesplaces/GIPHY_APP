@@ -30,7 +30,7 @@ $(document).ready(function(){
         //display buttons function is run again to show the new button
         renderButtons();
         return false
-        });
+        }); 
     }
 //function to display Giphy items
     function showGiphy(){
