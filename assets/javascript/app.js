@@ -35,7 +35,7 @@ $(document).ready(function(){
 //function to display Giphy items
     function showGiphy(){
         var animal = $(this).attr("animal");
-        var queryURL = "http://api.giphy.com/v1/gifs/search?q=" +
+        var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
         animal + "&api_key=lygpbhcJDvXB6WtmAMphpmGaHl7ldAGB&limit=10";
             
     $.ajax({
